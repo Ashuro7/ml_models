@@ -27,7 +27,7 @@ test_data = DataLoader(test, batch_size=batch_s, shuffle=True)
 #Model architecture definition
 class MNISTNet(nn.Module):
     def __init__(self, inp_s, out_s):
-        super().__init__()
+        super(MNISTNet, self).__init__()
         self.inp = nn.Linear(inp_s, 64)
         self.hd1 = nn.Linear(64,64)
         self.out = nn.Linear(64, out_s)
